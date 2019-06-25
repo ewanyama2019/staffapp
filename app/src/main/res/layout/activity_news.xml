@@ -11,11 +11,18 @@
         android:id="@+id/newsSearchView" />
 
     <TextView
+        android:id="@+id/allGeneralNews"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
-        android:layout_below="@+id/newsActivityButton"
-        android:id="@+id/allNews"/>
+        android:layout_below="@+id/newsActivityButton" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+    </androidx.recyclerview.widget.RecyclerView>
 
     <ListView
         android:id="@+id/newsListView"
