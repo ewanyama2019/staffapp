@@ -26,14 +26,18 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class NewsActivity extends AppCompatActivity {
+public class NewsActivity extends AppCompatActivity implements View.OnClickListener {
 
-//    @BindView(R.id.newsListView) ListView mNewsList;
+    //    @BindView(R.id.newsListView) ListView mNewsList;
 //    @BindView(R.id.generalNewsButton) Button mgeneralNewsButton;
-    @BindView(R.id.allGeneralNews) TextView mAllGeneralNews;
+    @BindView(R.id.allGeneralNews)
+    TextView mAllGeneralNews;
+    @BindView(R.id.departmentNewsButton)
+    Button mDepartmentNewsButton;
+
     private TextView textViewGeneralNewsResults;
 
-    private String[] news = new String[] {"Mi Mero Mole", "Mother's Bistro",
+    private String[] news = new String[]{"Mi Mero Mole", "Mother's Bistro",
             "Life of Pie", "Screen Door", "Luc Lac", "Sweet Basil",
             "Slappy Cakes", "Equinox", "Miss Delta's", "Andina",
             "Lardo", "Portland City Grill", "Fat Head's Brewery",
@@ -45,6 +49,7 @@ public class NewsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_news);
         ButterKnife.bind(this);
 
+        mDepartmentNewsButton.setOnClickListener(this);
 
         textViewGeneralNewsResults = findViewById(R.id.allGeneralNews);
 
@@ -80,8 +85,8 @@ public class NewsActivity extends AppCompatActivity {
 
                 List<GeneralNews> generalNewsList = response.body();
 
-                for (GeneralNews generalNews :generalNewsList) {
-                    String generalNewsContent ="";
+                for (GeneralNews generalNews : generalNewsList) {
+                    String generalNewsContent = "";
 //                    generalNewsContent += "id: " + generalNews.getId() + "\n";
 //                    generalNewsContent += "department_id " + generalNews.getDepartment_id() + "\n";
                     generalNewsContent += "description " + generalNews.getGeneralNews_Headlines() + "\n\n";
@@ -98,28 +103,16 @@ public class NewsActivity extends AppCompatActivity {
             }
         });
 
-//        mgeneralNewsButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                GeneralNews generalNews =new GeneralNews();
-//                Call<List<GeneralNews>> create_GeneralNews_Call = generalNewsService.getAllGeneralNews();
-//                create_GeneralNews_Call.enqueue(new Callback<GeneralNews>() {
-//                    @Override
-//                    public void onResponse(Call<GeneralNews> _, Response<GeneralNews> resp) {
-//                        GeneralNews newGeneralNews = resp.body();
-//                        textViewGeneralNewsResults.setText(newGeneralNews);
-//                    }
-//
-//                    @Override
-//                    public void onFailure(Call<GeneralNews> _, Throwable throwable) {
-//                        throwable.printStackTrace();
-//                        textViewGeneralNewsResults.setText(throwable.getMessage());
-//                    }
-//                });
-//
-//            }
-//
-//
-//        });
+
     }
+
+    @Override
+    public void onClick(View view) {
+        if (view == mDepartmentNewsButton) {
+            Intent intent = new Intent(NewsActivity.this, DepartmentNewsActivity.class);
+            startActivity(intent);
+        }
+
+    }
+
 }
