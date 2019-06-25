@@ -28,8 +28,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class NewsActivity extends AppCompatActivity {
 
-    @BindView(R.id.newsListView) ListView mNewsList;
-    @BindView(R.id.generalNewsButton) Button mgeneralNewsButton;
+//    @BindView(R.id.newsListView) ListView mNewsList;
+//    @BindView(R.id.generalNewsButton) Button mgeneralNewsButton;
     @BindView(R.id.allGeneralNews) TextView mAllGeneralNews;
     private TextView textViewGeneralNewsResults;
 
