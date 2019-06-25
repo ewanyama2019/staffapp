@@ -82,8 +82,8 @@ public class NewsActivity extends AppCompatActivity {
 
                 for (GeneralNews generalNews :generalNewsList) {
                     String generalNewsContent ="";
-                    generalNewsContent += "id: " + generalNews.getId() + "\n";
-                    generalNewsContent += "department_id " + generalNews.getDepartment_id() + "\n";
+//                    generalNewsContent += "id: " + generalNews.getId() + "\n";
+//                    generalNewsContent += "department_id " + generalNews.getDepartment_id() + "\n";
                     generalNewsContent += "description " + generalNews.getGeneralNews_Headlines() + "\n\n";
 
                     textViewGeneralNewsResults.append(generalNewsContent);

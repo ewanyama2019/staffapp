@@ -14,8 +14,8 @@
         android:id="@+id/allGeneralNews"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/departmentButton"
-        android:layout_marginBottom="612dp"
+        android:layout_below="@+id/newsSearchView"
+        android:layout_marginTop="4dp"
         android:text="" />
 
     <!--<androidx.recyclerview.widget.RecyclerView-->
