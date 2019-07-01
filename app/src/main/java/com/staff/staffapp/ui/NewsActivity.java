@@ -12,7 +12,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.staff.staffapp.model.GeneralNews;
-import com.staff.staffapp.service.NewsService;
+//import com.staff.staffapp.service.NewsService;
+import com.staff.staffapp.service.GeneralNewsServiceAPI;
 import com.staff.staffapp.R;
 
 import java.util.List;
@@ -70,7 +71,7 @@ public class NewsActivity extends AppCompatActivity implements View.OnClickListe
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
-        final NewsService generalNewsService = retrofit.create(NewsService.class);
+        final GeneralNewsServiceAPI generalNewsService = retrofit.create(GeneralNewsServiceAPI.class);
 
         Call<List<GeneralNews>> create_GeneralNews_Call = generalNewsService.getAllGeneralNews();
 

@@ -8,7 +8,7 @@ public class GeneralNews {
     private int department_id;
 
     @SerializedName("description")
-    private String generalNews_deadlines;
+    private String generalNews_headlines;
 
     public int getId() {
         return id;
@@ -19,6 +19,6 @@ public class GeneralNews {
     }
 
     public String getGeneralNews_Headlines() {
-        return generalNews_deadlines;
+        return generalNews_headlines;
     }
 }
