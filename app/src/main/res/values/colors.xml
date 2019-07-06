@@ -65,5 +65,17 @@
     <color name="colorThemeColor">#00C853</color>
     <color name="backgroundColor"></color>
     <color name="bgBottomNavigation">#fe485a</color>
+
+    <color name="colorBackground">#f9f9fa</color>
+    <color name="colorTextSubtitle">#4e4e4e</color>
+    <color name="colorTextTitle">#262626</color>
+
+
+
+
+
+
+
+
 </resources>
 

@@ -1,6 +1,6 @@
 //package com.staff.staffapp.service;
 //
-//import com.staff.staffapp.model.GeneralNews;
+//import com.staff.staffapp.news.model.GeneralNews;
 //
 //import java.util.List;
 //

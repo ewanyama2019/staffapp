@@ -166,7 +166,7 @@
 
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
-            android:value="com.staff.staffapp.ui.MainActivity" />
+            android:value="com.staff.staffapp.MainActivity" />
 
         <activity
             android:name="com.staff.staffapp.faq.PersonalProductsActivity"
@@ -187,12 +187,12 @@
                 android:value=".faq.ProductsActivity" />
         </activity>
         <activity
-            android:name="com.staff.staffapp.ui.NewsActivity"
-            android:parentActivityName="com.staff.staffapp.ui.MainActivity" />
+            android:name="com.staff.staffapp.news.ui.NewsActivity"
+            android:parentActivityName="com.staff.staffapp.MainActivity" />
         <activity
-            android:name="com.staff.staffapp.ui.DepartmentNewsActivity"
-            android:parentActivityName="com.staff.staffapp.ui.NewsActivity" />
-        <activity android:name="com.staff.staffapp.ui.MainActivity" >
+            android:name="com.staff.staffapp.news.ui.DepartmentNewsActivity"
+            android:parentActivityName="com.staff.staffapp.news.ui.NewsActivity" />
+        <activity android:name="com.staff.staffapp.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -200,8 +200,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.staff.staffapp.ui.NewsDetailsActivity"
-            android:parentActivityName="com.staff.staffapp.ui.NewsActivity" />
+            android:name="com.staff.staffapp.news.ui.NewsDetailsActivity"
+            android:parentActivityName="com.staff.staffapp.news.ui.NewsActivity" />
         <activity
             android:name="com.karumi.dexter.DexterActivity"
             android:theme="@style/Dexter.Internal.Theme.Transparent" />

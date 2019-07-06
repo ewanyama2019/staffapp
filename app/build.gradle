@@ -45,7 +45,7 @@ android {
 
         implementation 'com.google.android.material:material:1.0.0'
         implementation 'androidx.recyclerview:recyclerview:1.0.0'
-        implementation 'com.github.bumptech.glide:glide:3.7.0'
+
         implementation('com.squareup.picasso:picasso:2.71828') {
             exclude group: 'com.android.support'
             exclude module: ['exifinterface', 'support-annotations']
@@ -63,7 +63,6 @@ android {
         implementation 'com.google.firebase:firebase-core:17.0.0'
         implementation 'com.google.firebase:firebase-database:18.0.0'
 //    compile 'com.google.firebase:firebase-database:16.0.9'
-        implementation 'com.squareup.okhttp3:okhttp:3.10.0'
         implementation 'com.github.abdularis:circularimageview:1.4'
         implementation group: 'com.jakewharton', name: 'butterknife', version: '10.1.0'
         annotationProcessor group: 'com.jakewharton', name: 'butterknife-compiler', version: '10.1.0'
@@ -76,7 +75,7 @@ android {
         // Google API for parsing JSON
         implementation group: 'com.google.code.gson', name: 'gson', version: '2.8.5'
 
-        // Retrofit API framework dependencies
+        // Network Retrofit API framework dependencies
         implementation group: 'com.squareup.retrofit2', name: 'retrofit', version: '2.6.0'
         implementation group: 'com.squareup.retrofit2', name: 'converter-gson', version: '2.6.0'
 
@@ -89,6 +88,20 @@ android {
         //pdf Viewer & Reader
         implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
 
+        implementation 'androidx.appcompat:appcompat:+'
+        implementation 'androidx.constraintlayout:constraintlayout:+'
+
+        //Image
+        implementation 'com.github.bumptech.glide:glide:4.9.0'
+//        implementation 'com.github.bumptech.glide:volley-integration:4.9.0'
+//        implementation 'com.github.bumptech.glide:compiler:4.9.0'
+
+
+        //Times Formatter
+        implementation 'org.ocpsoft.prettytime:prettytime:4.0.1.Final'
+
     }
     apply plugin: 'com.google.gms.google-services'
 }
+
+

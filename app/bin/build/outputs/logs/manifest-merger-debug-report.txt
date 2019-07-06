@@ -253,19 +253,19 @@ ADDED from /home/jedi/Desktop/Android/staffapp/app/src/main/AndroidManifest.xml:
 		ADDED from /home/jedi/Desktop/Android/staffapp/app/src/main/AndroidManifest.xml:157:13-49
 	android:name
 		ADDED from /home/jedi/Desktop/Android/staffapp/app/src/main/AndroidManifest.xml:156:19-63
-activity#com.staff.staffapp.ui.NewsActivity
+activity#com.staff.staffapp.news.ui.NewsActivity
 ADDED from /home/jedi/Desktop/Android/staffapp/app/src/main/AndroidManifest.xml:162:9-164:70
 	android:parentActivityName
 		ADDED from /home/jedi/Desktop/Android/staffapp/app/src/main/AndroidManifest.xml:164:13-58
 	android:name
 		ADDED from /home/jedi/Desktop/Android/staffapp/app/src/main/AndroidManifest.xml:163:13-44
-activity#com.staff.staffapp.ui.DepartmentNewsActivity
+activity#com.staff.staffapp.news.ui.DepartmentNewsActivity
 ADDED from /home/jedi/Desktop/Android/staffapp/app/src/main/AndroidManifest.xml:165:9-167:61
 	android:parentActivityName
 		ADDED from /home/jedi/Desktop/Android/staffapp/app/src/main/AndroidManifest.xml:167:13-58
 	android:name
 		ADDED from /home/jedi/Desktop/Android/staffapp/app/src/main/AndroidManifest.xml:166:13-54
-activity#com.staff.staffapp.ui.MainActivity
+activity#com.staff.staffapp.MainActivity
 ADDED from /home/jedi/Desktop/Android/staffapp/app/src/main/AndroidManifest.xml:168:9-174:20
 	android:name
 		ADDED from /home/jedi/Desktop/Android/staffapp/app/src/main/AndroidManifest.xml:168:19-50
@@ -279,7 +279,7 @@ category#android.intent.category.LAUNCHER
 ADDED from /home/jedi/Desktop/Android/staffapp/app/src/main/AndroidManifest.xml:172:17-77
 	android:name
 		ADDED from /home/jedi/Desktop/Android/staffapp/app/src/main/AndroidManifest.xml:172:27-74
-activity#com.staff.staffapp.ui.NewsDetailsActivity
+activity#com.staff.staffapp.news.ui.NewsDetailsActivity
 ADDED from /home/jedi/Desktop/Android/staffapp/app/src/main/AndroidManifest.xml:176:9-178:61
 	android:parentActivityName
 		ADDED from /home/jedi/Desktop/Android/staffapp/app/src/main/AndroidManifest.xml:178:13-58

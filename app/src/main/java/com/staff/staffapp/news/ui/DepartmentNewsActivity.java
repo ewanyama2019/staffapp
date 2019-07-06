@@ -1,4 +1,4 @@
-package com.staff.staffapp.ui;
+package com.staff.staffapp.news.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 

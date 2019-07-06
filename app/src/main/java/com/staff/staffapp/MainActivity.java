@@ -1,4 +1,4 @@
-package com.staff.staffapp.ui;
+package com.staff.staffapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -6,14 +6,15 @@ import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-
-import com.staff.staffapp.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import com.staff.staffapp.faq.ProductsActivity;
+
+import com.staff.staffapp.news.ui.NewsActivity;
 import com.staff.staffapp.school.BusinessSchool;
+import com.staff.staffapp.ui.FAQ;
+import com.staff.staffapp.ui.ListActivity;
+import com.staff.staffapp.ui.ProductLandingActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private CardView mFAQButton;
