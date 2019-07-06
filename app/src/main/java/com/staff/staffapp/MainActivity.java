@@ -11,10 +11,10 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 import com.staff.staffapp.news.ui.NewsActivity;
-import com.staff.staffapp.school.BusinessSchool;
-import com.staff.staffapp.ui.FAQ;
-import com.staff.staffapp.ui.ListActivity;
-import com.staff.staffapp.ui.ProductLandingActivity;
+//import com.staff.staffapp.school.BusinessSchool;
+//import com.staff.staffapp.ui.FAQ;
+//import com.staff.staffapp.ui.ListActivity;
+//import com.staff.staffapp.ui.ProductLandingActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private CardView mFAQButton;
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, BusinessSchool.class));
+                startActivity(new Intent());
             }
         });
 
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mFAQButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, FAQ.class);
+                Intent intent = new Intent();
                 startActivity(intent);
             }
         });
@@ -64,12 +64,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ListActivity.class);
+                Intent intent = new Intent();
                 startActivity(intent);
             }
 
         });
-  
+
 
         mViewProductsButton = (CardView) findViewById(R.id.viewProductsButton);
         mViewProductsButton.setOnClickListener(this);
@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         if (view == mViewProductsButton) {
-            Intent intent = new Intent(MainActivity.this, ProductLandingActivity.class);
+            Intent intent = new Intent();
             startActivity(intent);
         }
     }
