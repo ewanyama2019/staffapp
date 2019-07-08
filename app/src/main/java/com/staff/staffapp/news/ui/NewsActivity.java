@@ -1,5 +1,6 @@
 package com.staff.staffapp.news.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -216,5 +217,24 @@ public class NewsActivity extends AppCompatActivity implements NavigationView.On
         });
     }
 
+
+    private void initListener() {
+        adapter.setOnItemClickListener(new NewsAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                Intent intent = new Intent(NewsActivity.this, NewsDetailActivity.class);
+
+                Article article = articles.get(position);
+                intent.putExtra("url", article.getUrl());
+                intent.putExtra("title", article.getTitle());
+                intent.putExtra("img",article.getUrlToImage());
+                intent.putExtra("date", article.getPublishedAt());
+                intent.putExtra("source", article.getSource().getName());
+                intent.putExtra("author", article.getAuthor());
+
+                startActivity(intent);
+            }
+        });
+    }
 }
 

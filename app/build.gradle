@@ -70,4 +70,6 @@ dependencies {
     implementation 'org.ocpsoft.prettytime:prettytime:4.0.1.Final'
 
     implementation group: 'de.hdodenhof', name: 'circleimageview', version: '3.0.0'
+
+    implementation group: 'com.rany.albeg.wein', name: 'appbar-translate-scale-behavior', version: '1.0.0'
 }
