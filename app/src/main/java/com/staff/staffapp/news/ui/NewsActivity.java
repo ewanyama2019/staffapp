@@ -219,6 +219,7 @@ public class NewsActivity extends AppCompatActivity implements NavigationView.On
 
 
     private void initListener() {
+
         adapter.setOnItemClickListener(new NewsAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {

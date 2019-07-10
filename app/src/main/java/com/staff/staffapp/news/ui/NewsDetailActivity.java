@@ -3,6 +3,7 @@ package com.staff.staffapp.news.ui;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebView;
@@ -13,9 +14,13 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
+import com.bumptech.glide.request.RequestOptions;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.staff.staffapp.R;
+import com.staff.staffapp.news.utils.Utils;
 
 public class NewsDetailActivity extends AppCompatActivity implements AppBarLayout.OnOffsetChangedListener{
 
@@ -51,6 +56,40 @@ public class NewsDetailActivity extends AppCompatActivity implements AppBarLayou
         date_NewsDetail = findViewById(R.id.date);
         time_NewsDetail = findViewById(R.id.time);
         title_NewsDetail = findViewById(R.id.title);
+
+        Intent intent = getIntent();
+        mUrl_NewsDetail = intent.getStringExtra("url");
+        mImg_NewsDetail = intent.getStringExtra("img");
+        mTitle_NewsDetail = intent.getStringExtra("title");
+        mDate_NewsDetail = intent.getStringExtra("date");
+        mSource_NewsDetail = intent.getStringExtra("source");
+        mAuthor_NewsDetail = intent.getStringExtra("author");
+
+        RequestOptions requestOptions = new RequestOptions();
+        requestOptions.error(Utils.getRandomDrawbleColor());
+
+        Glide.with(this)
+                .load(mImg_NewsDetail)
+                .apply(requestOptions)
+                .transition(DrawableTransitionOptions.withCrossFade())
+                .into(imageView_NewsDetail);
+
+        appbar_title_NewsDetail.setText(mSource_NewsDetail);
+        appbar_subtittle_NewsDetail.setText(mUrl_NewsDetail);
+        date_NewsDetail.setText(Utils.DateFormat(mDate_NewsDetail));
+        title_NewsDetail.setText(mTitle_NewsDetail);
+
+        String author = null;
+        if (mAuthor_NewsDetail != null || mAuthor_NewsDetail != "") {
+            mAuthor_NewsDetail = " \u2022 " + mAuthor_NewsDetail;
+        } else {
+            author = "";
+        }
+
+        time_NewsDetail.setText(mSource_NewsDetail + author + " \u2022 " + Utils.DateToTimeFormat(mDate_NewsDetail));
+
+        initWebView_NewsDetail(mUrl_NewsDetail);
+
 
     }
 
