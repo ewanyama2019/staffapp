@@ -45,14 +45,14 @@
                 android:orientation="vertical">
 
                 <ImageView
-
+                    android:elevation="20dp"
                     android:scaleType="centerCrop"
                     android:layout_width="match_parent"
                     android:layout_height="70dp" />
 
                 <ImageView
                     android:layout_alignParentBottom="true"
-
+                    android:elevation="20dp"
                     android:id="@+id/img2"
                     android:layout_alignBottom="@+id/img"
                     android:scaleType="centerCrop"
@@ -83,7 +83,7 @@
                         android:id="@+id/title_on_appbar"
                         style="@style/Base.TextAppearance.AppCompat.Widget.ActionBar.Title"
                         android:text="News for you"
-                        android:textSize="18dp"
+                        android:textSize="18sp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:maxLines="1"
@@ -95,7 +95,7 @@
                         android:id="@+id/subtitle_on_appbar"
                         style="@style/Base.TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
                         android:text="Subtitle"
-                        android:textSize="12dp"
+                        android:textSize="12sp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:maxLines="1"
@@ -107,7 +107,7 @@
 
             </androidx.appcompat.widget.Toolbar>
 
-        </com.google.android.material.appbar.CollapsingToolbarLayout>>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
 
     </com.google.android.material.appbar.AppBarLayout>
 

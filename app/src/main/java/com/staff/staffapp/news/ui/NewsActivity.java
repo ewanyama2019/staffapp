@@ -171,6 +171,8 @@ public class NewsActivity extends AppCompatActivity implements NavigationView.On
                     adapter = new NewsAdapter(articles, NewsActivity.this);
                     recyclerView.setAdapter(adapter);
                     adapter.notifyDataSetChanged();
+
+                    initListener();
                 }
                 else {
                     Toast.makeText(NewsActivity.this, "No Result!", Toast.LENGTH_SHORT).show();
@@ -204,6 +206,8 @@ public class NewsActivity extends AppCompatActivity implements NavigationView.On
                     adapter = new NewsAdapter(articles, NewsActivity.this);
                     recyclerView.setAdapter(adapter);
                     adapter.notifyDataSetChanged();
+
+                    initListener();
                 }
                 else {
                     Toast.makeText(NewsActivity.this, "No Result!", Toast.LENGTH_SHORT).show();
@@ -218,7 +222,7 @@ public class NewsActivity extends AppCompatActivity implements NavigationView.On
     }
 
 
-    private void initListener() {
+    private void initListener(){
 
         adapter.setOnItemClickListener(new NewsAdapter.OnItemClickListener() {
             @Override
