@@ -223,9 +223,6 @@
         </activity>
         <activity android:name=".ui.ListActivity" />
         <activity android:name=".ui.ContactListActivity" />
-        <activity
-            android:name=".news.ui.NewsDetailsActivity"
-            android:parentActivityName=".news.ui.NewsActivity" />
     </application>
 
 </manifest>
