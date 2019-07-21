@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <!-- Base application theme. -->
@@ -6,6 +7,20 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+    <style name="MyCardViewStyle" parent="Theme.AppCompat.Light">
+        <item name="cardCornerRadius">30dp</item>
+        <item name="cardElevation">10dp</item>
+    </style>
+
+    <style name="FaqTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/safgreen</item>
+    </style>
+
+    <style name="LeaveTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/safgreen</item>
     </style>
 
     <style name="MyCardViewStyle" parent="Theme.AppCompat.Light">

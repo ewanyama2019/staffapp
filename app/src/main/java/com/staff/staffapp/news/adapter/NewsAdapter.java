@@ -124,7 +124,6 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.MyViewHolder> 
             imageView = itemView.findViewById(R.id.img);
             progressBar = itemView.findViewById(R.id.progress_load_photo);
 
-
             this.onItemClickListener = onItemClickListener;
 
 

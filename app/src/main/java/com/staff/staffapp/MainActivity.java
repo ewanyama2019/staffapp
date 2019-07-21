@@ -21,6 +21,23 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ButterKnife.bind(this);
+        btn = findViewById(R.id.button);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent());
+            }
+        });
+
+        mFAQButton = (CardView) findViewById(R.id.faq_button);
+
+        mFAQButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                startActivity(intent);
+            }
+        });
 
         mNewsActivityButton.setOnClickListener(new View.OnClickListener() {
 
@@ -30,5 +47,31 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        mChatButton = (CardView) findViewById(R.id.chatButton);
+        mChatButton.setOnClickListener(new View.OnClickListener() {
+
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                startActivity(intent);
+            }
+
+        });
+
+
+        mViewProductsButton = (CardView) findViewById(R.id.viewProductsButton);
+        mViewProductsButton.setOnClickListener(this);
     }
+
+    @Override
+    public void onClick(View view) {
+        if (view == mViewProductsButton) {
+            Intent intent = new Intent();
+            startActivity(intent);
+        }
+    }
+
+    
 }
